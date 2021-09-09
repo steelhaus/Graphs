@@ -1,0 +1,663 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B40EF61126C6956F00FC832F /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40EF61026C6956F00FC832F /* Canvas.swift */; };
+		B40EF61426C69A6D00FC832F /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40EF61326C69A6D00FC832F /* Point.swift */; };
+		B40EF61626C69A7400FC832F /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40EF61526C69A7400FC832F /* Bridge.swift */; };
+		B40EF61B26C6B7AB00FC832F /* BridgeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40EF61A26C6B7AB00FC832F /* BridgeStyle.swift */; };
+		B40EF61D26C6B82E00FC832F /* BridgeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40EF61C26C6B82E00FC832F /* BridgeType.swift */; };
+		B40EF61F26C6B83D00FC832F /* PointStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40EF61E26C6B83D00FC832F /* PointStyle.swift */; };
+		B423328A26DE395A00150886 /* CommonBezierSplineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423328926DE395A00150886 /* CommonBezierSplineView.swift */; };
+		B423328C26DE397700150886 /* CommonBezierSplineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423328B26DE397700150886 /* CommonBezierSplineViewModel.swift */; };
+		B423328E26DE39F700150886 /* CommonBezierSplineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423328D26DE39F700150886 /* CommonBezierSplineModel.swift */; };
+		B423329126DE3E5900150886 /* DoubleManualQubicBezierSplineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423329026DE3E5800150886 /* DoubleManualQubicBezierSplineModel.swift */; };
+		B423329326DE3E6100150886 /* DoubleManualQubicBezierSplineViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423329226DE3E6100150886 /* DoubleManualQubicBezierSplineViewFactory.swift */; };
+		B423329626DE45EF00150886 /* QubicBezierSplineSampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423329526DE45EF00150886 /* QubicBezierSplineSampleModel.swift */; };
+		B423329826DE45F600150886 /* QubicBezierSplineSampleViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423329726DE45F600150886 /* QubicBezierSplineSampleViewFactory.swift */; };
+		B423329B26DE470C00150886 /* QuadBezierSplineSampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423329A26DE470C00150886 /* QuadBezierSplineSampleModel.swift */; };
+		B423329D26DE471300150886 /* QuadBezierSplineSampleViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423329C26DE471300150886 /* QuadBezierSplineSampleViewFactory.swift */; };
+		B42332A126DE5B8C00150886 /* MergedQubicSplineSampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42332A026DE5B8C00150886 /* MergedQubicSplineSampleModel.swift */; };
+		B42332A326DE5B9200150886 /* MergedQubicSplineSampleViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42332A226DE5B9200150886 /* MergedQubicSplineSampleViewFactory.swift */; };
+		B42332A726DE640200150886 /* CommonBranchedBezierSplineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42332A626DE640200150886 /* CommonBranchedBezierSplineView.swift */; };
+		B42332A926DE643800150886 /* CommonBranchedBezierSplineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42332A826DE643800150886 /* CommonBranchedBezierSplineViewModel.swift */; };
+		B42332AB26DE649D00150886 /* CommonBranchedBezierSplineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42332AA26DE649D00150886 /* CommonBranchedBezierSplineModel.swift */; };
+		B42332AE26DE65E900150886 /* LinearBranchedGraphModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42332AD26DE65E900150886 /* LinearBranchedGraphModel.swift */; };
+		B42332B026DE65F500150886 /* LinearBranchedViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42332AF26DE65F500150886 /* LinearBranchedViewFactory.swift */; };
+		B42332E126E79C7D00150886 /* MergedQubicBranchedSplineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42332E026E79C7D00150886 /* MergedQubicBranchedSplineModel.swift */; };
+		B42332E326E79E1200150886 /* MergedQubicBranchedSplineViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42332E226E79E1200150886 /* MergedQubicBranchedSplineViewFactory.swift */; };
+		B42332E626E7F58C00150886 /* MixedBezierSplineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42332E526E7F58C00150886 /* MixedBezierSplineModel.swift */; };
+		B42332E826E7F59700150886 /* MixedBezierSplineViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42332E726E7F59700150886 /* MixedBezierSplineViewFactory.swift */; };
+		B42332EB26E8148400150886 /* BezierSplineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42332EA26E8148400150886 /* BezierSplineModel.swift */; };
+		B42332ED26E8149100150886 /* BezierSplineViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42332EC26E8149100150886 /* BezierSplineViewFactory.swift */; };
+		B42332EF26E8152E00150886 /* BezierSplineConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42332EE26E8152E00150886 /* BezierSplineConfiguration.swift */; };
+		B42332F426E90D4F00150886 /* LagrangePolynomialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42332F326E90D4F00150886 /* LagrangePolynomialModel.swift */; };
+		B42332F626E90D5600150886 /* LagrangePolynomialViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42332F526E90D5600150886 /* LagrangePolynomialViewFactory.swift */; };
+		B42332F926E929DD00150886 /* QubicSplineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42332F826E929DD00150886 /* QubicSplineModel.swift */; };
+		B42332FB26E929E700150886 /* QubicSplineViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42332FA26E929E700150886 /* QubicSplineViewFactory.swift */; };
+		B42332FE26E937A900150886 /* ApproximationSplineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42332FD26E937A900150886 /* ApproximationSplineModel.swift */; };
+		B423330026E937B000150886 /* ApproximationSplineViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42332FF26E937B000150886 /* ApproximationSplineViewFactory.swift */; };
+		B423330326E9F64200150886 /* BezierBranchedSplineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423330226E9F64200150886 /* BezierBranchedSplineModel.swift */; };
+		B423330526E9F64B00150886 /* BezierBranchedSplineViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423330426E9F64B00150886 /* BezierBranchedSplineViewFactory.swift */; };
+		B423330D26EA27CE00150886 /* CatmullRomSplineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423330C26EA27CE00150886 /* CatmullRomSplineModel.swift */; };
+		B423330F26EA27D500150886 /* CatmullRomSplineViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423330E26EA27D500150886 /* CatmullRomSplineViewFactory.swift */; };
+		B423331226EA296F00150886 /* CatmullRomBezierSplineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423331126EA296F00150886 /* CatmullRomBezierSplineModel.swift */; };
+		B423331426EA297400150886 /* CatmullRomBezierSplineViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423331326EA297400150886 /* CatmullRomBezierSplineViewFactory.swift */; };
+		B423331726EA43CD00150886 /* CatmullRomBranchedBezierSplineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423331626EA43CD00150886 /* CatmullRomBranchedBezierSplineModel.swift */; };
+		B423331926EA43D300150886 /* CatmullRomBranchedBezierSplineViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423331826EA43D300150886 /* CatmullRomBranchedBezierSplineViewFactory.swift */; };
+		B46ABB8026B19790007BE25B /* BezierGraphApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46ABB7F26B19790007BE25B /* BezierGraphApp.swift */; };
+		B46ABB8226B19790007BE25B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46ABB8126B19790007BE25B /* ContentView.swift */; };
+		B46ABB8426B19791007BE25B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B46ABB8326B19791007BE25B /* Assets.xcassets */; };
+		B46ABB8726B19791007BE25B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B46ABB8626B19791007BE25B /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B40EF61026C6956F00FC832F /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
+		B40EF61326C69A6D00FC832F /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		B40EF61526C69A7400FC832F /* Bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
+		B40EF61A26C6B7AB00FC832F /* BridgeStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeStyle.swift; sourceTree = "<group>"; };
+		B40EF61C26C6B82E00FC832F /* BridgeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeType.swift; sourceTree = "<group>"; };
+		B40EF61E26C6B83D00FC832F /* PointStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointStyle.swift; sourceTree = "<group>"; };
+		B423328926DE395A00150886 /* CommonBezierSplineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonBezierSplineView.swift; sourceTree = "<group>"; };
+		B423328B26DE397700150886 /* CommonBezierSplineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonBezierSplineViewModel.swift; sourceTree = "<group>"; };
+		B423328D26DE39F700150886 /* CommonBezierSplineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonBezierSplineModel.swift; sourceTree = "<group>"; };
+		B423329026DE3E5800150886 /* DoubleManualQubicBezierSplineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleManualQubicBezierSplineModel.swift; sourceTree = "<group>"; };
+		B423329226DE3E6100150886 /* DoubleManualQubicBezierSplineViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleManualQubicBezierSplineViewFactory.swift; sourceTree = "<group>"; };
+		B423329526DE45EF00150886 /* QubicBezierSplineSampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QubicBezierSplineSampleModel.swift; sourceTree = "<group>"; };
+		B423329726DE45F600150886 /* QubicBezierSplineSampleViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QubicBezierSplineSampleViewFactory.swift; sourceTree = "<group>"; };
+		B423329A26DE470C00150886 /* QuadBezierSplineSampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadBezierSplineSampleModel.swift; sourceTree = "<group>"; };
+		B423329C26DE471300150886 /* QuadBezierSplineSampleViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadBezierSplineSampleViewFactory.swift; sourceTree = "<group>"; };
+		B42332A026DE5B8C00150886 /* MergedQubicSplineSampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergedQubicSplineSampleModel.swift; sourceTree = "<group>"; };
+		B42332A226DE5B9200150886 /* MergedQubicSplineSampleViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergedQubicSplineSampleViewFactory.swift; sourceTree = "<group>"; };
+		B42332A626DE640200150886 /* CommonBranchedBezierSplineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonBranchedBezierSplineView.swift; sourceTree = "<group>"; };
+		B42332A826DE643800150886 /* CommonBranchedBezierSplineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonBranchedBezierSplineViewModel.swift; sourceTree = "<group>"; };
+		B42332AA26DE649D00150886 /* CommonBranchedBezierSplineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonBranchedBezierSplineModel.swift; sourceTree = "<group>"; };
+		B42332AD26DE65E900150886 /* LinearBranchedGraphModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearBranchedGraphModel.swift; sourceTree = "<group>"; };
+		B42332AF26DE65F500150886 /* LinearBranchedViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearBranchedViewFactory.swift; sourceTree = "<group>"; };
+		B42332E026E79C7D00150886 /* MergedQubicBranchedSplineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergedQubicBranchedSplineModel.swift; sourceTree = "<group>"; };
+		B42332E226E79E1200150886 /* MergedQubicBranchedSplineViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergedQubicBranchedSplineViewFactory.swift; sourceTree = "<group>"; };
+		B42332E526E7F58C00150886 /* MixedBezierSplineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixedBezierSplineModel.swift; sourceTree = "<group>"; };
+		B42332E726E7F59700150886 /* MixedBezierSplineViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixedBezierSplineViewFactory.swift; sourceTree = "<group>"; };
+		B42332EA26E8148400150886 /* BezierSplineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierSplineModel.swift; sourceTree = "<group>"; };
+		B42332EC26E8149100150886 /* BezierSplineViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierSplineViewFactory.swift; sourceTree = "<group>"; };
+		B42332EE26E8152E00150886 /* BezierSplineConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierSplineConfiguration.swift; sourceTree = "<group>"; };
+		B42332F326E90D4F00150886 /* LagrangePolynomialModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LagrangePolynomialModel.swift; sourceTree = "<group>"; };
+		B42332F526E90D5600150886 /* LagrangePolynomialViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LagrangePolynomialViewFactory.swift; sourceTree = "<group>"; };
+		B42332F826E929DD00150886 /* QubicSplineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QubicSplineModel.swift; sourceTree = "<group>"; };
+		B42332FA26E929E700150886 /* QubicSplineViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QubicSplineViewFactory.swift; sourceTree = "<group>"; };
+		B42332FD26E937A900150886 /* ApproximationSplineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproximationSplineModel.swift; sourceTree = "<group>"; };
+		B42332FF26E937B000150886 /* ApproximationSplineViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproximationSplineViewFactory.swift; sourceTree = "<group>"; };
+		B423330226E9F64200150886 /* BezierBranchedSplineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierBranchedSplineModel.swift; sourceTree = "<group>"; };
+		B423330426E9F64B00150886 /* BezierBranchedSplineViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierBranchedSplineViewFactory.swift; sourceTree = "<group>"; };
+		B423330C26EA27CE00150886 /* CatmullRomSplineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatmullRomSplineModel.swift; sourceTree = "<group>"; };
+		B423330E26EA27D500150886 /* CatmullRomSplineViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatmullRomSplineViewFactory.swift; sourceTree = "<group>"; };
+		B423331126EA296F00150886 /* CatmullRomBezierSplineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatmullRomBezierSplineModel.swift; sourceTree = "<group>"; };
+		B423331326EA297400150886 /* CatmullRomBezierSplineViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatmullRomBezierSplineViewFactory.swift; sourceTree = "<group>"; };
+		B423331626EA43CD00150886 /* CatmullRomBranchedBezierSplineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatmullRomBranchedBezierSplineModel.swift; sourceTree = "<group>"; };
+		B423331826EA43D300150886 /* CatmullRomBranchedBezierSplineViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatmullRomBranchedBezierSplineViewFactory.swift; sourceTree = "<group>"; };
+		B46ABB7C26B19790007BE25B /* BezierGraph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BezierGraph.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B46ABB7F26B19790007BE25B /* BezierGraphApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierGraphApp.swift; sourceTree = "<group>"; };
+		B46ABB8126B19790007BE25B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B46ABB8326B19791007BE25B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B46ABB8626B19791007BE25B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B46ABB8826B19791007BE25B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B46ABB7926B19790007BE25B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B40EF61226C69A5B00FC832F /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				B40EF61026C6956F00FC832F /* Canvas.swift */,
+				B40EF61326C69A6D00FC832F /* Point.swift */,
+				B40EF61E26C6B83D00FC832F /* PointStyle.swift */,
+				B40EF61526C69A7400FC832F /* Bridge.swift */,
+				B40EF61A26C6B7AB00FC832F /* BridgeStyle.swift */,
+				B40EF61C26C6B82E00FC832F /* BridgeType.swift */,
+			);
+			path = Canvas;
+			sourceTree = "<group>";
+		};
+		B423328826DE393900150886 /* CommonBezierSpline */ = {
+			isa = PBXGroup;
+			children = (
+				B423328926DE395A00150886 /* CommonBezierSplineView.swift */,
+				B423328B26DE397700150886 /* CommonBezierSplineViewModel.swift */,
+				B423328D26DE39F700150886 /* CommonBezierSplineModel.swift */,
+			);
+			path = CommonBezierSpline;
+			sourceTree = "<group>";
+		};
+		B423328F26DE3E3900150886 /* DoubleManualQubicBezierSpline */ = {
+			isa = PBXGroup;
+			children = (
+				B423329026DE3E5800150886 /* DoubleManualQubicBezierSplineModel.swift */,
+				B423329226DE3E6100150886 /* DoubleManualQubicBezierSplineViewFactory.swift */,
+			);
+			path = DoubleManualQubicBezierSpline;
+			sourceTree = "<group>";
+		};
+		B423329426DE45D100150886 /* QubicBezierSplineSample */ = {
+			isa = PBXGroup;
+			children = (
+				B423329526DE45EF00150886 /* QubicBezierSplineSampleModel.swift */,
+				B423329726DE45F600150886 /* QubicBezierSplineSampleViewFactory.swift */,
+			);
+			path = QubicBezierSplineSample;
+			sourceTree = "<group>";
+		};
+		B423329926DE470000150886 /* QuadBezierSplineSample */ = {
+			isa = PBXGroup;
+			children = (
+				B423329A26DE470C00150886 /* QuadBezierSplineSampleModel.swift */,
+				B423329C26DE471300150886 /* QuadBezierSplineSampleViewFactory.swift */,
+			);
+			path = QuadBezierSplineSample;
+			sourceTree = "<group>";
+		};
+		B423329E26DE4B0800150886 /* SplineViewsSamples */ = {
+			isa = PBXGroup;
+			children = (
+				B423331026EA295C00150886 /* CatmullRomBezierSpline */,
+				B423330B26EA27C300150886 /* CatmullRomSpline */,
+				B42332FC26E9378F00150886 /* ApproximationSpline */,
+				B42332F726E929CD00150886 /* CubicSpline */,
+				B42332F226E90D3900150886 /* LagrangePolynomial */,
+				B42332E426E7F54A00150886 /* MixedBezierSpline */,
+				B423329F26DE5B5C00150886 /* MergedQubicSplineSample */,
+				B423329926DE470000150886 /* QuadBezierSplineSample */,
+				B423329426DE45D100150886 /* QubicBezierSplineSample */,
+				B423328F26DE3E3900150886 /* DoubleManualQubicBezierSpline */,
+				B42332E926E8146F00150886 /* BezierSpline */,
+			);
+			path = SplineViewsSamples;
+			sourceTree = "<group>";
+		};
+		B423329F26DE5B5C00150886 /* MergedQubicSplineSample */ = {
+			isa = PBXGroup;
+			children = (
+				B42332A026DE5B8C00150886 /* MergedQubicSplineSampleModel.swift */,
+				B42332A226DE5B9200150886 /* MergedQubicSplineSampleViewFactory.swift */,
+			);
+			path = MergedQubicSplineSample;
+			sourceTree = "<group>";
+		};
+		B42332A426DE639500150886 /* SplineViewsBranchedSamples */ = {
+			isa = PBXGroup;
+			children = (
+				B423331526EA43B600150886 /* CatmullRomBranchedBezierSpline */,
+				B423330126E9F63100150886 /* BezierBranchedSpline */,
+				B42332DF26E79C2D00150886 /* MergedQubicBranchedSplineSample */,
+				B42332AC26DE65CA00150886 /* LinearBranchedView */,
+			);
+			path = SplineViewsBranchedSamples;
+			sourceTree = "<group>";
+		};
+		B42332A526DE63B300150886 /* CommonBranchedBezierSpline */ = {
+			isa = PBXGroup;
+			children = (
+				B42332A626DE640200150886 /* CommonBranchedBezierSplineView.swift */,
+				B42332A826DE643800150886 /* CommonBranchedBezierSplineViewModel.swift */,
+				B42332AA26DE649D00150886 /* CommonBranchedBezierSplineModel.swift */,
+			);
+			path = CommonBranchedBezierSpline;
+			sourceTree = "<group>";
+		};
+		B42332AC26DE65CA00150886 /* LinearBranchedView */ = {
+			isa = PBXGroup;
+			children = (
+				B42332AD26DE65E900150886 /* LinearBranchedGraphModel.swift */,
+				B42332AF26DE65F500150886 /* LinearBranchedViewFactory.swift */,
+			);
+			path = LinearBranchedView;
+			sourceTree = "<group>";
+		};
+		B42332DF26E79C2D00150886 /* MergedQubicBranchedSplineSample */ = {
+			isa = PBXGroup;
+			children = (
+				B42332E026E79C7D00150886 /* MergedQubicBranchedSplineModel.swift */,
+				B42332E226E79E1200150886 /* MergedQubicBranchedSplineViewFactory.swift */,
+			);
+			path = MergedQubicBranchedSplineSample;
+			sourceTree = "<group>";
+		};
+		B42332E426E7F54A00150886 /* MixedBezierSpline */ = {
+			isa = PBXGroup;
+			children = (
+				B42332E526E7F58C00150886 /* MixedBezierSplineModel.swift */,
+				B42332E726E7F59700150886 /* MixedBezierSplineViewFactory.swift */,
+			);
+			path = MixedBezierSpline;
+			sourceTree = "<group>";
+		};
+		B42332E926E8146F00150886 /* BezierSpline */ = {
+			isa = PBXGroup;
+			children = (
+				B42332EA26E8148400150886 /* BezierSplineModel.swift */,
+				B42332EC26E8149100150886 /* BezierSplineViewFactory.swift */,
+				B42332EE26E8152E00150886 /* BezierSplineConfiguration.swift */,
+			);
+			path = BezierSpline;
+			sourceTree = "<group>";
+		};
+		B42332F226E90D3900150886 /* LagrangePolynomial */ = {
+			isa = PBXGroup;
+			children = (
+				B42332F326E90D4F00150886 /* LagrangePolynomialModel.swift */,
+				B42332F526E90D5600150886 /* LagrangePolynomialViewFactory.swift */,
+			);
+			path = LagrangePolynomial;
+			sourceTree = "<group>";
+		};
+		B42332F726E929CD00150886 /* CubicSpline */ = {
+			isa = PBXGroup;
+			children = (
+				B42332F826E929DD00150886 /* QubicSplineModel.swift */,
+				B42332FA26E929E700150886 /* QubicSplineViewFactory.swift */,
+			);
+			path = CubicSpline;
+			sourceTree = "<group>";
+		};
+		B42332FC26E9378F00150886 /* ApproximationSpline */ = {
+			isa = PBXGroup;
+			children = (
+				B42332FD26E937A900150886 /* ApproximationSplineModel.swift */,
+				B42332FF26E937B000150886 /* ApproximationSplineViewFactory.swift */,
+			);
+			path = ApproximationSpline;
+			sourceTree = "<group>";
+		};
+		B423330126E9F63100150886 /* BezierBranchedSpline */ = {
+			isa = PBXGroup;
+			children = (
+				B423330226E9F64200150886 /* BezierBranchedSplineModel.swift */,
+				B423330426E9F64B00150886 /* BezierBranchedSplineViewFactory.swift */,
+			);
+			path = BezierBranchedSpline;
+			sourceTree = "<group>";
+		};
+		B423330B26EA27C300150886 /* CatmullRomSpline */ = {
+			isa = PBXGroup;
+			children = (
+				B423330C26EA27CE00150886 /* CatmullRomSplineModel.swift */,
+				B423330E26EA27D500150886 /* CatmullRomSplineViewFactory.swift */,
+			);
+			path = CatmullRomSpline;
+			sourceTree = "<group>";
+		};
+		B423331026EA295C00150886 /* CatmullRomBezierSpline */ = {
+			isa = PBXGroup;
+			children = (
+				B423331126EA296F00150886 /* CatmullRomBezierSplineModel.swift */,
+				B423331326EA297400150886 /* CatmullRomBezierSplineViewFactory.swift */,
+			);
+			path = CatmullRomBezierSpline;
+			sourceTree = "<group>";
+		};
+		B423331526EA43B600150886 /* CatmullRomBranchedBezierSpline */ = {
+			isa = PBXGroup;
+			children = (
+				B423331626EA43CD00150886 /* CatmullRomBranchedBezierSplineModel.swift */,
+				B423331826EA43D300150886 /* CatmullRomBranchedBezierSplineViewFactory.swift */,
+			);
+			path = CatmullRomBranchedBezierSpline;
+			sourceTree = "<group>";
+		};
+		B46ABB7326B19790007BE25B = {
+			isa = PBXGroup;
+			children = (
+				B46ABB7E26B19790007BE25B /* BezierGraph */,
+				B46ABB7D26B19790007BE25B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B46ABB7D26B19790007BE25B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B46ABB7C26B19790007BE25B /* BezierGraph.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B46ABB7E26B19790007BE25B /* BezierGraph */ = {
+			isa = PBXGroup;
+			children = (
+				B46ABB7F26B19790007BE25B /* BezierGraphApp.swift */,
+				B46ABB8126B19790007BE25B /* ContentView.swift */,
+				B40EF61226C69A5B00FC832F /* Canvas */,
+				B423328826DE393900150886 /* CommonBezierSpline */,
+				B42332A526DE63B300150886 /* CommonBranchedBezierSpline */,
+				B423329E26DE4B0800150886 /* SplineViewsSamples */,
+				B42332A426DE639500150886 /* SplineViewsBranchedSamples */,
+				B46ABB8326B19791007BE25B /* Assets.xcassets */,
+				B46ABB8826B19791007BE25B /* Info.plist */,
+				B46ABB8526B19791007BE25B /* Preview Content */,
+			);
+			path = BezierGraph;
+			sourceTree = "<group>";
+		};
+		B46ABB8526B19791007BE25B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B46ABB8626B19791007BE25B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B46ABB7B26B19790007BE25B /* BezierGraph */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B46ABB8B26B19791007BE25B /* Build configuration list for PBXNativeTarget "BezierGraph" */;
+			buildPhases = (
+				B46ABB7826B19790007BE25B /* Sources */,
+				B46ABB7926B19790007BE25B /* Frameworks */,
+				B46ABB7A26B19790007BE25B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BezierGraph;
+			productName = BezierGraph;
+			productReference = B46ABB7C26B19790007BE25B /* BezierGraph.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B46ABB7426B19790007BE25B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					B46ABB7B26B19790007BE25B = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = B46ABB7726B19790007BE25B /* Build configuration list for PBXProject "BezierGraph" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B46ABB7326B19790007BE25B;
+			productRefGroup = B46ABB7D26B19790007BE25B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B46ABB7B26B19790007BE25B /* BezierGraph */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B46ABB7A26B19790007BE25B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B46ABB8726B19791007BE25B /* Preview Assets.xcassets in Resources */,
+				B46ABB8426B19791007BE25B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B46ABB7826B19790007BE25B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B42332FB26E929E700150886 /* QubicSplineViewFactory.swift in Sources */,
+				B423329D26DE471300150886 /* QuadBezierSplineSampleViewFactory.swift in Sources */,
+				B42332F626E90D5600150886 /* LagrangePolynomialViewFactory.swift in Sources */,
+				B423329626DE45EF00150886 /* QubicBezierSplineSampleModel.swift in Sources */,
+				B423329B26DE470C00150886 /* QuadBezierSplineSampleModel.swift in Sources */,
+				B42332E626E7F58C00150886 /* MixedBezierSplineModel.swift in Sources */,
+				B40EF61426C69A6D00FC832F /* Point.swift in Sources */,
+				B40EF61B26C6B7AB00FC832F /* BridgeStyle.swift in Sources */,
+				B40EF61626C69A7400FC832F /* Bridge.swift in Sources */,
+				B423331726EA43CD00150886 /* CatmullRomBranchedBezierSplineModel.swift in Sources */,
+				B423328C26DE397700150886 /* CommonBezierSplineViewModel.swift in Sources */,
+				B423328A26DE395A00150886 /* CommonBezierSplineView.swift in Sources */,
+				B40EF61F26C6B83D00FC832F /* PointStyle.swift in Sources */,
+				B423329326DE3E6100150886 /* DoubleManualQubicBezierSplineViewFactory.swift in Sources */,
+				B42332A726DE640200150886 /* CommonBranchedBezierSplineView.swift in Sources */,
+				B423330526E9F64B00150886 /* BezierBranchedSplineViewFactory.swift in Sources */,
+				B42332AB26DE649D00150886 /* CommonBranchedBezierSplineModel.swift in Sources */,
+				B42332EB26E8148400150886 /* BezierSplineModel.swift in Sources */,
+				B40EF61D26C6B82E00FC832F /* BridgeType.swift in Sources */,
+				B46ABB8226B19790007BE25B /* ContentView.swift in Sources */,
+				B423329126DE3E5900150886 /* DoubleManualQubicBezierSplineModel.swift in Sources */,
+				B42332A326DE5B9200150886 /* MergedQubicSplineSampleViewFactory.swift in Sources */,
+				B42332FE26E937A900150886 /* ApproximationSplineModel.swift in Sources */,
+				B42332ED26E8149100150886 /* BezierSplineViewFactory.swift in Sources */,
+				B423331926EA43D300150886 /* CatmullRomBranchedBezierSplineViewFactory.swift in Sources */,
+				B423331226EA296F00150886 /* CatmullRomBezierSplineModel.swift in Sources */,
+				B423330D26EA27CE00150886 /* CatmullRomSplineModel.swift in Sources */,
+				B42332E126E79C7D00150886 /* MergedQubicBranchedSplineModel.swift in Sources */,
+				B42332A926DE643800150886 /* CommonBranchedBezierSplineViewModel.swift in Sources */,
+				B46ABB8026B19790007BE25B /* BezierGraphApp.swift in Sources */,
+				B42332F426E90D4F00150886 /* LagrangePolynomialModel.swift in Sources */,
+				B42332AE26DE65E900150886 /* LinearBranchedGraphModel.swift in Sources */,
+				B423328E26DE39F700150886 /* CommonBezierSplineModel.swift in Sources */,
+				B423330326E9F64200150886 /* BezierBranchedSplineModel.swift in Sources */,
+				B423331426EA297400150886 /* CatmullRomBezierSplineViewFactory.swift in Sources */,
+				B40EF61126C6956F00FC832F /* Canvas.swift in Sources */,
+				B423329826DE45F600150886 /* QubicBezierSplineSampleViewFactory.swift in Sources */,
+				B42332A126DE5B8C00150886 /* MergedQubicSplineSampleModel.swift in Sources */,
+				B423330026E937B000150886 /* ApproximationSplineViewFactory.swift in Sources */,
+				B42332E826E7F59700150886 /* MixedBezierSplineViewFactory.swift in Sources */,
+				B42332F926E929DD00150886 /* QubicSplineModel.swift in Sources */,
+				B42332B026DE65F500150886 /* LinearBranchedViewFactory.swift in Sources */,
+				B42332EF26E8152E00150886 /* BezierSplineConfiguration.swift in Sources */,
+				B423330F26EA27D500150886 /* CatmullRomSplineViewFactory.swift in Sources */,
+				B42332E326E79E1200150886 /* MergedQubicBranchedSplineViewFactory.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B46ABB8926B19791007BE25B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B46ABB8A26B19791007BE25B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B46ABB8C26B19791007BE25B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"BezierGraph/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = BezierGraph/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.steelhaus.BezierGraph;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B46ABB8D26B19791007BE25B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"BezierGraph/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = BezierGraph/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.steelhaus.BezierGraph;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B46ABB7726B19790007BE25B /* Build configuration list for PBXProject "BezierGraph" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B46ABB8926B19791007BE25B /* Debug */,
+				B46ABB8A26B19791007BE25B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B46ABB8B26B19791007BE25B /* Build configuration list for PBXNativeTarget "BezierGraph" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B46ABB8C26B19791007BE25B /* Debug */,
+				B46ABB8D26B19791007BE25B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B46ABB7426B19790007BE25B /* Project object */;
+}
