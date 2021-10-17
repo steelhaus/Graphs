@@ -24,12 +24,24 @@ struct ContentView: View {
     @State private var showCatmullRomView: Bool = false
     @State private var showCatmullRomBezierView: Bool = false
     @State private var showCatmullRomBranchedBezierView: Bool = false
+    @State private var showZeroSample = false
+    @State private var showZeroSampleRev2 = false
 
     var body: some View {
         NavigationView {
             ZStack {
                 Group {
                     Group {
+                        NavigationLink(
+                            destination: SampleZeroViewFactory.make(),
+                            isActive: $showZeroSample) {
+                            EmptyView()
+                        }
+                        NavigationLink(
+                            destination: SampleZeroRev2ViewFactory.make(),
+                            isActive: $showZeroSampleRev2) {
+                            EmptyView()
+                        }
                         NavigationLink(
                             destination: QuadBezierSplineSampleViewFactory.make(),
                             isActive: $showQuadBezierView) {
@@ -70,11 +82,11 @@ struct ContentView: View {
                             isActive: $showBezierView) {
                             EmptyView()
                         }
-                        NavigationLink(
-                            destination: LagrangePolynomialViewFactory.make(),
-                            isActive: $showLagrange) {
-                            EmptyView()
-                        }
+                    }
+                    NavigationLink(
+                        destination: LagrangePolynomialViewFactory.make(),
+                        isActive: $showLagrange) {
+                        EmptyView()
                     }
                     NavigationLink(
                         destination: QubicSplineViewFactory.make(),
@@ -110,6 +122,8 @@ struct ContentView: View {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 8) {
                         Group {
+                            GraphButton(title: "0) Zero sample", state: $showZeroSample)
+                            GraphButton(title: "0) Zero sample, Rev: 2", state: $showZeroSampleRev2)
                             GraphButton(title: "1) Quad bezier sample", state: $showQuadBezierView)
                             GraphButton(title: "2) Qubic bezier sample", state: $showQubicBezierView)
                             GraphButton(title: "3) Double quad bezier sample", state: $showManualQubicBezierView)
@@ -117,10 +131,10 @@ struct ContentView: View {
                             GraphButton(title: "5) Linear spline (branched)", state: $showLinearBranchedView)
                             GraphButton(title: "6) Qubic simply merged spline (branched)", state: $showMergedQubicBranchedBezierSplineView)
                             GraphButton(title: "7) Qubic+quad mix spline", state: $showMixedBezierSplineView)
-                            GraphButton(title: "8) Lagrange", state: $showLagrange)
-                            GraphButton(title: "9) Catmull-Rom spline", state: $showCatmullRomView)
-                            GraphButton(title: "10) Catmull-Rom bezier spline", state: $showCatmullRomBezierView)
                         }
+                        GraphButton(title: "8) Lagrange", state: $showLagrange)
+                        GraphButton(title: "9) Catmull-Rom spline", state: $showCatmullRomView)
+                        GraphButton(title: "10) Catmull-Rom bezier spline", state: $showCatmullRomBezierView)
                         GraphButton(title: "11) Catmull-Rom bezier spline (branched)", state: $showCatmullRomBranchedBezierView)
                         GraphButton(title: "12) C-Spline", state: $showQubicSpline)
                         GraphButton(title: "13) Bezier approximation", state: $showApproximation)

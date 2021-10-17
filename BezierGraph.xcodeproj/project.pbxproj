@@ -50,6 +50,10 @@
 		B423331426EA297400150886 /* CatmullRomBezierSplineViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423331326EA297400150886 /* CatmullRomBezierSplineViewFactory.swift */; };
 		B423331726EA43CD00150886 /* CatmullRomBranchedBezierSplineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423331626EA43CD00150886 /* CatmullRomBranchedBezierSplineModel.swift */; };
 		B423331926EA43D300150886 /* CatmullRomBranchedBezierSplineViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423331826EA43D300150886 /* CatmullRomBranchedBezierSplineViewFactory.swift */; };
+		B4579D5427186C7B002AFCF6 /* SampleZeroViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4579D5327186C7B002AFCF6 /* SampleZeroViewFactory.swift */; };
+		B4579D5627186C85002AFCF6 /* SampleZeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4579D5527186C85002AFCF6 /* SampleZeroModel.swift */; };
+		B4579D5A271C8D21002AFCF6 /* SampleZeroRev2ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4579D59271C8D21002AFCF6 /* SampleZeroRev2ViewFactory.swift */; };
+		B4579D5C271C8D2C002AFCF6 /* SampleZeroRev2Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4579D5B271C8D2C002AFCF6 /* SampleZeroRev2Model.swift */; };
 		B46ABB8026B19790007BE25B /* BezierGraphApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46ABB7F26B19790007BE25B /* BezierGraphApp.swift */; };
 		B46ABB8226B19790007BE25B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46ABB8126B19790007BE25B /* ContentView.swift */; };
 		B46ABB8426B19791007BE25B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B46ABB8326B19791007BE25B /* Assets.xcassets */; };
@@ -100,6 +104,10 @@
 		B423331326EA297400150886 /* CatmullRomBezierSplineViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatmullRomBezierSplineViewFactory.swift; sourceTree = "<group>"; };
 		B423331626EA43CD00150886 /* CatmullRomBranchedBezierSplineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatmullRomBranchedBezierSplineModel.swift; sourceTree = "<group>"; };
 		B423331826EA43D300150886 /* CatmullRomBranchedBezierSplineViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatmullRomBranchedBezierSplineViewFactory.swift; sourceTree = "<group>"; };
+		B4579D5327186C7B002AFCF6 /* SampleZeroViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleZeroViewFactory.swift; sourceTree = "<group>"; };
+		B4579D5527186C85002AFCF6 /* SampleZeroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleZeroModel.swift; sourceTree = "<group>"; };
+		B4579D59271C8D21002AFCF6 /* SampleZeroRev2ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleZeroRev2ViewFactory.swift; sourceTree = "<group>"; };
+		B4579D5B271C8D2C002AFCF6 /* SampleZeroRev2Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleZeroRev2Model.swift; sourceTree = "<group>"; };
 		B46ABB7C26B19790007BE25B /* BezierGraph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BezierGraph.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B46ABB7F26B19790007BE25B /* BezierGraphApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierGraphApp.swift; sourceTree = "<group>"; };
 		B46ABB8126B19790007BE25B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -172,6 +180,8 @@
 		B423329E26DE4B0800150886 /* SplineViewsSamples */ = {
 			isa = PBXGroup;
 			children = (
+				B4579D58271C8D0B002AFCF6 /* SampleZeroRev2 */,
+				B4579D5227186C5C002AFCF6 /* SampleZeroRev1 */,
 				B423331026EA295C00150886 /* CatmullRomBezierSpline */,
 				B423330B26EA27C300150886 /* CatmullRomSpline */,
 				B42332FC26E9378F00150886 /* ApproximationSpline */,
@@ -317,6 +327,24 @@
 			path = CatmullRomBranchedBezierSpline;
 			sourceTree = "<group>";
 		};
+		B4579D5227186C5C002AFCF6 /* SampleZeroRev1 */ = {
+			isa = PBXGroup;
+			children = (
+				B4579D5327186C7B002AFCF6 /* SampleZeroViewFactory.swift */,
+				B4579D5527186C85002AFCF6 /* SampleZeroModel.swift */,
+			);
+			path = SampleZeroRev1;
+			sourceTree = "<group>";
+		};
+		B4579D58271C8D0B002AFCF6 /* SampleZeroRev2 */ = {
+			isa = PBXGroup;
+			children = (
+				B4579D59271C8D21002AFCF6 /* SampleZeroRev2ViewFactory.swift */,
+				B4579D5B271C8D2C002AFCF6 /* SampleZeroRev2Model.swift */,
+			);
+			path = SampleZeroRev2;
+			sourceTree = "<group>";
+		};
 		B46ABB7326B19790007BE25B = {
 			isa = PBXGroup;
 			children = (
@@ -443,6 +471,7 @@
 				B423329326DE3E6100150886 /* DoubleManualQubicBezierSplineViewFactory.swift in Sources */,
 				B42332A726DE640200150886 /* CommonBranchedBezierSplineView.swift in Sources */,
 				B423330526E9F64B00150886 /* BezierBranchedSplineViewFactory.swift in Sources */,
+				B4579D5627186C85002AFCF6 /* SampleZeroModel.swift in Sources */,
 				B42332AB26DE649D00150886 /* CommonBranchedBezierSplineModel.swift in Sources */,
 				B42332EB26E8148400150886 /* BezierSplineModel.swift in Sources */,
 				B40EF61D26C6B82E00FC832F /* BridgeType.swift in Sources */,
@@ -456,9 +485,11 @@
 				B423330D26EA27CE00150886 /* CatmullRomSplineModel.swift in Sources */,
 				B42332E126E79C7D00150886 /* MergedQubicBranchedSplineModel.swift in Sources */,
 				B42332A926DE643800150886 /* CommonBranchedBezierSplineViewModel.swift in Sources */,
+				B4579D5A271C8D21002AFCF6 /* SampleZeroRev2ViewFactory.swift in Sources */,
 				B46ABB8026B19790007BE25B /* BezierGraphApp.swift in Sources */,
 				B42332F426E90D4F00150886 /* LagrangePolynomialModel.swift in Sources */,
 				B42332AE26DE65E900150886 /* LinearBranchedGraphModel.swift in Sources */,
+				B4579D5C271C8D2C002AFCF6 /* SampleZeroRev2Model.swift in Sources */,
 				B423328E26DE39F700150886 /* CommonBezierSplineModel.swift in Sources */,
 				B423330326E9F64200150886 /* BezierBranchedSplineModel.swift in Sources */,
 				B423331426EA297400150886 /* CatmullRomBezierSplineViewFactory.swift in Sources */,
@@ -466,6 +497,7 @@
 				B423329826DE45F600150886 /* QubicBezierSplineSampleViewFactory.swift in Sources */,
 				B42332A126DE5B8C00150886 /* MergedQubicSplineSampleModel.swift in Sources */,
 				B423330026E937B000150886 /* ApproximationSplineViewFactory.swift in Sources */,
+				B4579D5427186C7B002AFCF6 /* SampleZeroViewFactory.swift in Sources */,
 				B42332E826E7F59700150886 /* MixedBezierSplineViewFactory.swift in Sources */,
 				B42332F926E929DD00150886 /* QubicSplineModel.swift in Sources */,
 				B42332B026DE65F500150886 /* LinearBranchedViewFactory.swift in Sources */,
