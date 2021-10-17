@@ -46,7 +46,7 @@ final class SampleZeroRev2Model: CommonBezierSplineModel {
         var leftDeltaX: CGFloat = 0
         let roundingCoefficient: CGFloat = 0.15
         for i in 0 ..< points.count - 2 {
-            // Алгоритм рассчета контрольных точек
+            // Алгоритм расчета контрольных точек
             let rightDeltaY = (points[i + 2].y - points[i].y) / 2 * roundingCoefficient
             let rightDeltaX = (points[i + 1].x - points[i].x) * roundingCoefficient
             let leftControlPoint = CGPoint(x: points[i].x + leftDeltaX,

@@ -35,42 +35,45 @@ final class SampleZeroModel: CommonBezierSplineModel {
     func calculateBridges(mainPoints: [Point],
                           controlPoints: [Point],
                           showControlPoints: Bool) -> BridgesInfo {
-        var nextCP: CGPoint = mainPoints[0].position
 
-        var mainBridges: [Bridge] = []
-        var supportBridges: [Bridge] = []
-        var controlPoints: [CGPoint] = []
+        let mainPoints = mainPoints + [mainPoints[mainPoints.count - 1]]
+        var containers: [QuibicBridgeContainer] = []
+        var controlPoints: [Point] = []
+        let points = mainPoints.map(\.position)
 
-        for i in 1 ..< mainPoints.count - 1 {
-            let point = mainPoints[i]
-            let lPoint = mainPoints[i - 1]
-            let rPoint = mainPoints[i + 1]
-            let cps = calculateMiddlePoint(point.position,
-                                           lPoint: lPoint.position,
-                                           rPoint: rPoint.position)
-            let bridge = Bridge(style: .main,
-                                type: .qubic(firstControlPoint: nextCP, secondControlPoint: cps.0),
-                                startPoint: lPoint.position,
-                                endPoint: point.position)
-            mainBridges.append(bridge)
-            if showControlPoints {
-                supportBridges.append(.init(style: .support, type: .linear, startPoint: lPoint.position, endPoint: nextCP))
-                supportBridges.append(.init(style: .support, type: .linear, startPoint: point.position, endPoint: cps.0))
-                controlPoints.append(cps.0)
-                controlPoints.append(cps.1)
-            }
-            nextCP = cps.1
+        guard let firstPoint = points.first else { return .init(controlPoints: [], bridges: []) }
+        var leftControlPoint: CGPoint = firstPoint
+        for i in 0 ..< mainPoints.count - 2 {
+            // Алгоритм расчета контрольных точек
+            let controlPointsTuple = calculateMiddlePoint(points[i + 1],
+                                                     lPoint: points[i],
+                                                     rPoint: points[i + 2])
+            let rightControlPoint = controlPointsTuple.0
+
+            // Добавим точки и кривые для отображения
+            let cp1 = Point(style: .support, isDraggable: false, position: leftControlPoint)
+            let cp2 = Point(style: .support, isDraggable: false, position: rightControlPoint)
+            let container = QuibicBridgeContainer(mp1: mainPoints[i],
+                                                  mp2: mainPoints[i + 1],
+                                                  cp1: cp1,
+                                                  cp2: cp2)
+            controlPoints.append(contentsOf: [cp1, cp2])
+            containers.append(container)
+            leftControlPoint = controlPointsTuple.1
         }
 
-        let lastPoint = mainPoints[mainPoints.count - 1]
-        let bridge = Bridge(style: .main,
-                            type: .qubic(firstControlPoint: nextCP, secondControlPoint: lastPoint.position),
-                            startPoint: mainPoints[mainPoints.count - 2].position,
-                            endPoint: lastPoint.position)
-        mainBridges.append(bridge)
+        // Далее все для отображения. Формируем кривые, каждая на основе двух точек и двух контрольных точек
 
-        let cps = controlPoints.map { Point(style: .support, isDraggable: false, position: $0) }
-        return .init(controlPoints: cps, bridges: mainBridges + supportBridges)
+        // Main bridges
+        var bridges = containers.map { $0.makeBridge(style: .main) }
+
+        // Support bridges
+        if showControlPoints {
+            let supportBridges = containers.flatMap { $0.makeSupportBridges(style: .support) }
+            bridges.append(contentsOf: supportBridges)
+        }
+
+        return BridgesInfo(controlPoints: controlPoints, bridges: bridges)
     }
 
     /// Здесь этот метод не нужен
