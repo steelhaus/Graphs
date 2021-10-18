@@ -30,7 +30,7 @@ final class LagrangePolynomialModel: CommonBezierSplineModel {
         return PointsInfo(mainPoints: mainPoints, controlPoints: [])
     }
 
-    func calculateBridges(mainPoints: [Point], controlPoints: [Point], showControlPoints: Bool) -> BridgesInfo {
+    func calculateBridges(mainPoints: [Point], controlPoints: [Point], showControlPoints: Bool, k: CGFloat) -> BridgesInfo {
         return .init(controlPoints: [], bridges: [])
     }
 

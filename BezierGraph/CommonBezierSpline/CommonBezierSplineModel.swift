@@ -28,6 +28,8 @@ protocol CommonBezierSplineModel {
     /// Возможно ли самостоятельно изменять контрольные точки
     var manualControlPointsEnabled: Bool { get }
 
+    var shouldShowKSelector: Bool { get }
+
     /// Создать новые точки для графика
     func makePoints() -> PointsInfo
 
@@ -38,7 +40,8 @@ protocol CommonBezierSplineModel {
     ///   - showControlPoints: Добавлять ли связи между основными и контрольными точками
     func calculateBridges(mainPoints: [Point],
                           controlPoints: [Point],
-                          showControlPoints: Bool) -> BridgesInfo
+                          showControlPoints: Bool,
+                          k: CGFloat) -> BridgesInfo
 
     func calculatePaths(points: [Point]) -> [PathInfo]
 }
@@ -46,13 +49,16 @@ protocol CommonBezierSplineModel {
 extension CommonBezierSplineModel {
     func calculateBridges(mainPoints: [Point],
                           controlPoints: [Point],
-                          showControlPoints: Bool) -> BridgesInfo {
+                          showControlPoints: Bool,
+                          k: CGFloat) -> BridgesInfo {
         .init(controlPoints: [], bridges: [])
     }
 
     func calculatePaths(points: [Point]) -> [PathInfo] {
         []
     }
+
+    var shouldShowKSelector: Bool { false }
 }
 
 // MARK: - Helpers

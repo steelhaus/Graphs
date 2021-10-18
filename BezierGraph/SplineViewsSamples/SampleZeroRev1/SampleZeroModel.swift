@@ -12,6 +12,8 @@ final class SampleZeroModel: CommonBezierSplineModel {
     /// Возможно ли самостоятельно изменять контрольные точки
     var manualControlPointsEnabled: Bool { false }
 
+    var shouldShowKSelector: Bool { true }
+
     /// Создать новые точки для графика
     func makePoints() -> PointsInfo {
         let mainPoints = [
@@ -34,7 +36,8 @@ final class SampleZeroModel: CommonBezierSplineModel {
     ///   - showControlPoints: Добавлять ли связи между основными и контрольными точками
     func calculateBridges(mainPoints: [Point],
                           controlPoints: [Point],
-                          showControlPoints: Bool) -> BridgesInfo {
+                          showControlPoints: Bool,
+                          k: CGFloat) -> BridgesInfo {
 
         let mainPoints = mainPoints + [mainPoints[mainPoints.count - 1]]
         var containers: [QuibicBridgeContainer] = []
@@ -47,7 +50,8 @@ final class SampleZeroModel: CommonBezierSplineModel {
             // Алгоритм расчета контрольных точек
             let controlPointsTuple = calculateMiddlePoint(points[i + 1],
                                                      lPoint: points[i],
-                                                     rPoint: points[i + 2])
+                                                     rPoint: points[i + 2],
+                                                     curvingCoeff: k)
             let rightControlPoint = controlPointsTuple.0
 
             // Добавим точки и кривые для отображения
@@ -79,9 +83,9 @@ final class SampleZeroModel: CommonBezierSplineModel {
     /// Здесь этот метод не нужен
     func calculatePaths(points: [Point]) -> [PathInfo] { [] }
 
-    private func calculateMiddlePoint(_ point: CGPoint, lPoint: CGPoint, rPoint: CGPoint) -> (CGPoint, CGPoint) {
+    private func calculateMiddlePoint(_ point: CGPoint, lPoint: CGPoint, rPoint: CGPoint, curvingCoeff: CGFloat) -> (CGPoint, CGPoint) {
         
-        let dxMultiplier: CGFloat = 0.15
+        let dxMultiplier: CGFloat = curvingCoeff
         let kCoeff = (rPoint.y - lPoint.y) / (rPoint.x - lPoint.x)
         let bCoeff = point.y - kCoeff * point.x
         let deltaX = min(point.x - lPoint.x, rPoint.x - point.x) * dxMultiplier

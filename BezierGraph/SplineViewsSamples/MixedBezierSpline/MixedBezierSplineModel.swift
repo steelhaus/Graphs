@@ -58,7 +58,7 @@ final class MixedBezierSplineModel: CommonBezierSplineModel {
     ///   - controlPoints: Контрольные точки
     ///   - showControlPoints: Добавлять ли связи между основными и контрольными точками
     /// - Returns: Новые контрольные точки и связи
-    func calculateBridges(mainPoints: [Point], controlPoints: [Point], showControlPoints: Bool) -> BridgesInfo {
+    func calculateBridges(mainPoints: [Point], controlPoints: [Point], showControlPoints: Bool, k: CGFloat) -> BridgesInfo {
         guard mainPoints.count >= 2 else { return .init(controlPoints: [], bridges: []) }
 
         // Calculate main bridges info

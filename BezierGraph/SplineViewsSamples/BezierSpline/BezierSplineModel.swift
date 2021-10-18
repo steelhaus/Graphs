@@ -33,7 +33,7 @@ final class BezierSplineModel: CommonBezierSplineModel {
     ///   - controlPoints: Контрольные точки
     ///   - showControlPoints: Добавлять ли связи между основными и контрольными точками
     /// - Returns: Новые контрольные точки и связи
-    func calculateBridges(mainPoints: [Point], controlPoints: [Point], showControlPoints: Bool) -> BridgesInfo {
+    func calculateBridges(mainPoints: [Point], controlPoints: [Point], showControlPoints: Bool, k: CGFloat) -> BridgesInfo {
         let configuration = BezierSplineConfiguration()
         let cgPoints = mainPoints.map(\.position)
         let controlPoints = configuration.configureControlPoints(data: cgPoints)

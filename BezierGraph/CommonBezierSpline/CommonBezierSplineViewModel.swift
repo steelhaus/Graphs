@@ -15,8 +15,17 @@ final class CommonBezierSplineViewModel: ObservableObject {
         didSet { calculateBridges() }
     }
 
+    var showKSelector: Bool {
+        model.shouldShowKSelector
+    }
+
     /// Размер точек
     @Published var pointsScale: CGFloat = 1.0
+
+    /// Коэффициент, принимающий значения от 0 до 1
+    @Published var k: CGFloat = 0.15 {
+        didSet { calculateBridges() }
+    }
 
     /// Связи для отображения
     @Published private(set) var displayBridges: [Bridge] = []
@@ -72,7 +81,7 @@ final class CommonBezierSplineViewModel: ObservableObject {
     private func calculateBridges() {
         let result = model.calculateBridges(mainPoints: mainPoints,
                                             controlPoints: controlPoints,
-                                            showControlPoints: showControlPoints)
+                                            showControlPoints: showControlPoints, k: k)
         displayBridges = result.bridges
         if !model.manualControlPointsEnabled {
             controlPoints = result.controlPoints

@@ -30,7 +30,7 @@ final class CatmullRomBezierSplineModel: CommonBezierSplineModel {
         return PointsInfo(mainPoints: mainPoints, controlPoints: [])
     }
 
-    func calculateBridges(mainPoints: [Point], controlPoints: [Point], showControlPoints: Bool) -> BridgesInfo {
+    func calculateBridges(mainPoints: [Point], controlPoints: [Point], showControlPoints: Bool, k: CGFloat) -> BridgesInfo {
 
         let mainPoints = mainPoints + [mainPoints[mainPoints.count - 1]]
         var containers: [QuibicBridgeContainer] = []

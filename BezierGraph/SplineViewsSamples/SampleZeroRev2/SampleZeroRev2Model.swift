@@ -12,6 +12,8 @@ final class SampleZeroRev2Model: CommonBezierSplineModel {
     /// Возможно ли самостоятельно изменять контрольные точки
     var manualControlPointsEnabled: Bool { false }
 
+    var shouldShowKSelector: Bool { true }
+
     /// Создать новые точки для графика
     func makePoints() -> PointsInfo {
         let mainPoints = [
@@ -34,7 +36,8 @@ final class SampleZeroRev2Model: CommonBezierSplineModel {
     ///   - showControlPoints: Добавлять ли связи между основными и контрольными точками
     func calculateBridges(mainPoints: [Point],
                           controlPoints: [Point],
-                          showControlPoints: Bool) -> BridgesInfo {
+                          showControlPoints: Bool,
+                          k: CGFloat) -> BridgesInfo {
 
         // Для рассчетов добавим одну дополнительную точку, эквивалентную последней
         let mainPoints = mainPoints + [mainPoints[mainPoints.count - 1]]
@@ -44,7 +47,7 @@ final class SampleZeroRev2Model: CommonBezierSplineModel {
 
         var leftDeltaY: CGFloat = 0
         var leftDeltaX: CGFloat = 0
-        let roundingCoefficient: CGFloat = 0.15
+        let roundingCoefficient: CGFloat = k
         for i in 0 ..< points.count - 2 {
             // Алгоритм расчета контрольных точек
             let rightDeltaY = (points[i + 2].y - points[i].y) / 2 * roundingCoefficient

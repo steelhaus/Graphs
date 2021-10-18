@@ -35,6 +35,18 @@ struct CommonBezierSplineView: View {
             }
             .padding(.bottom)
             .padding(.horizontal)
+            if viewModel.showKSelector {
+                HStack(spacing: 40) {
+                    Text("Curve coefficient: ")
+                        .font(.title2)
+                    Slider(value: $viewModel.k, in: 0...1)
+                        .frame(width: 200)
+                    Text("\(viewModel.k)")
+                        .font(.title3)
+                }
+                .padding(.bottom)
+                .padding(.horizontal)
+            }
         }
         .navigationBarTitle(title, displayMode: .inline)
     }
